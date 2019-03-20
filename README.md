@@ -1,68 +1,30 @@
+## TODO App in React
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Simple Todo application with storing data in localStorage.
 
-In the project directory, you can run:
+Project structure is divided in 4 components.
+App.js is where state is being managed of the application. It also renders the input form and consists of TodoItemList component which renders the todo list.
 
-### `npm start`
+TodoItemList component is a functional component as there is no need to manage state and props are being passed from App.js to be consumed by TodoItemList's child component which is TodoItem. TodoItem renders each row of TodoItem.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+TodoItem needs delete and updateComplete functions to be passed by it's parent component to update the state of the application. i.e. either delete the item or update the item's completed|inprogress state.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+App.js also has CountInfo functional component to display Active | Total counts of todo items. 
 
-### `npm test`
+Project also has helper directory with index.js file
+That file consists of actual logic to add, delete and update the state of the todo items.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I used Bootstrap and FontAwesome for quick layouting.
 
-### `npm run build`
+Demo Link: 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+To run this in your local environment follow below mentioned steps:
+1) clone this repo by going to your terminal and typing:  `git clone https://github.com/harshmakani/test-react-todomvc.git`
+2) navigate to test-react-todomvc directory.
+3) type in terminal: `npm install`
+4) type in terminal: `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Demo Link
+[https://harshmakani.github.io/test-react-todomvc/](https://harshmakani.github.io/test-react-todomvc)
